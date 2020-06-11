@@ -1,0 +1,55 @@
+.clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.backdrop {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+.left-50 {
+  left: 50%;
+}
+
+.right-50 {
+  right: 50%;
+}
+.top-50 {
+  top: 50%;
+}
+.min-w-90 {
+  min-width: 90%;
+}
+.max-w-90 {
+  max-width: 90%;
+}
+.h-52-screen {
+  height: 40vh;
+}
+
+@screen sm {
+  .h-52-screen {
+    height: 100vh;
+  } 
+}
+@screen md {
+  .h-52-screen {
+    height: 50vh;
+  } 
+}
+.min-w-drop {
+  min-width: 16rem;
+}
+
+.m-0-auto {
+  margin: 0 auto;
+}
+
+.ws-84 {
+  width: 84vw;
+}
+
+.max-w-drop {
+  max-height: calc(100vw - 30px) ;
+}

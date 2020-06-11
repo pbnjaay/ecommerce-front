@@ -1,0 +1,71 @@
+.close {
+    position: relative;
+    height: 2px;
+    @apply w-4;
+    color: currentColor;
+    &::after,
+    &::before {
+      @apply w-4;
+      background-color: currentColor;
+      content: "";
+      height: 2px;
+      @apply w-4;
+      display: inline-block;
+      position: absolute;
+      left: 0;
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+  }
+  .burger {
+    position: relative;
+    height: 2px;
+    @apply w-5;
+    &::before {
+      @apply w-5;
+      @apply bg-dark;
+      content: "";
+      height: 2px;
+      left: 0;
+      display: inline-block;
+      position: absolute;
+      top: -5px;
+      box-shadow: 0 5px 0 currentColor, 0 10px 0 currentColor;
+    }
+  }
+
+  .cartBadge {
+    position: relative;
+    &::before,
+    &::after {
+      display: inline-block;
+      position: absolute;
+      min-width: 17px;
+      height: 17px;
+      text-align: center;
+      right: -9px;
+      top: -9px;
+    }
+    &::after {
+      content: attr(nbr);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: bold;
+
+    }
+    &::before {
+      content: "";
+      border-radius: 50%;
+      @apply bg-primary;
+    }
+  }
+  @screen xl {
+    .cartBadge::after,
+    .cartBadge::before {
+      right: 0px;
+    }
+  }
