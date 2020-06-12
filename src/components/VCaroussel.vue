@@ -1,29 +1,30 @@
 <template>
   <div class="caroussel h-52-screen relative">
-    <span
-      class="arrow absolute left-0 top-50 z-20 rounded-full hidden"
+    <button
+      class="justify-center items-center rounded-full w-8 h-8 left-0 hidden btn"
       @click="goBack"
       v-if="nav && activeSlide > 1"
     >
-      <svg class="w-8 h-8 cursor-pointer stroke-current">
+      <svg class="w-5 h-5 cursor-pointer stroke-current text-white">
         <use xlink:href="@/assets/svg/sprite.svg#chevron-back-outline" />
       </svg>
-    </span>
-    <span
-      class="arrow absolute right-0 top-50 z-20 rounded-full hidden"
+    </button>
+    <button
+      class="justify-center items-center rounded-full w-8 h-8 btn hidden right-0"
       @click="goForward"
       v-if="nav && activeSlide !== slides"
     >
-      <svg class="w-8 h-8 cursor-pointer stroke-current">
+      <svg class="w-5 h-5 cursor-pointer stroke-current text-white">
         <use xlink:href="@/assets/svg/sprite.svg#chevron-forward-outline" />
       </svg>
-    </span>
+    </button>
     <div v-if="indic" class="box-indic absolute flex space-x-2">
       <span
         v-for="i in slides"
         :key="i"
-        class="w-2 h-2 rounded-full bg-gray-400"
+        class="w-2 h-2 rounded-full bg-gray-400 cursor-pointer"
         :class="{ 'bg-primary': i === activeSlide }"
+        @click="activeSlide = i"
       ></span>
     </div>
     <slot />
@@ -79,9 +80,18 @@ export default {
 .box-indic {
   bottom: 5px;
   left: 50%;
-  z-index: 50;
+  z-index: 2;
 }
-.caroussel:hover .arrow {
-  display: inline;
+.caroussel:hover button {
+  display: flex;
+}
+.btn {
+  position: absolute;
+  top: 50%;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.5);
+  &:focus {
+    outline: none;
+  }
 }
 </style>

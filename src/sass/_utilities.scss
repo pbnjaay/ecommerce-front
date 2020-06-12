@@ -25,17 +25,17 @@
   max-width: 90%;
 }
 .h-52-screen {
-  height: 40vh;
+  min-height: 40vh;
 }
 
 @screen sm {
   .h-52-screen {
-    height: 100vh;
+    min-height: 100vh;
   } 
 }
 @screen md {
   .h-52-screen {
-    height: 50vh;
+    min-height: 50vh;
   } 
 }
 .min-w-drop {

@@ -1,6 +1,6 @@
 <template>
   <header
-    class="xl:hidden flex flex-col items-center shadow w-full pb-2 bg-white"
+    class="xl:hidden sticky top-0 bg-white z-10 flex flex-col items-center shadow w-full pb-2 bg-white"
   >
     <div class="flex items-center justify-between h-16 min-w-90">
       <div class="flex space-x-6 items-center">

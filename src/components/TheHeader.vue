@@ -1,6 +1,6 @@
 <template>
   <header
-    class="hidden xl:flex items-center justify-between w-full h-20 shadow px-12 bg-white"
+    class="hidden sticky top-0 z-10 xl:flex items-center justify-between w-full h-20 shadow px-12 bg-white"
   >
     <span class="border border-dark rounded font-bold">
       CHON&trade;

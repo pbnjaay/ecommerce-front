@@ -2,13 +2,13 @@
   <div id="app">
     <the-header-mobile @click="showMenu" />
     <the-header />
-    <main class="bg-gray2">
+    <main class="bg-gray2 z-0">
       <slot />
       <a
         href="#top"
-        class="xl:hidden flex justify-center text-dark py-2 bg-gray-400"
+        class="xl:hidden flex flex-col justify-center items-center text-dark bg-gray-400"
       >
-        <svg class="w-5 h-5 mr-2 cursor-pointer stroke-current">
+        <svg class="w-4 h-4 cursor-pointer stroke-current text-sm py-px">
           <use xlink:href="@/assets/svg/sprite.svg#chevron-up-outline" />
         </svg>
         Haut de page
