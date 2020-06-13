@@ -1,7 +1,7 @@
 <template>
   <transition name="slide" mode="in-out">
     <div
-      class="absolute inset-0"
+      class="h-full absolute inset-0"
       :to="{ name: 'Home' }"
       v-if="activeSlide === id"
       aria-hidden="true"

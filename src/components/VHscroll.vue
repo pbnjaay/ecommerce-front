@@ -1,13 +1,13 @@
 <template>
-  <div class="w relative">
+  <div class="wpo w-full bg-white relative px-2">
     <header class="h-8">
       <h1 class="text-lg font-semibold">{{ titre }}</h1>
     </header>
-    <div class="scrl flex space-x-4 overflow-hidden relative" ref="caroussel">
+    <div class="scrl flex" ref="caroussel">
       <slot />
     </div>
     <button
-      class="justify-center items-center rounded-full w-8 h-8 left-0 hidden btn"
+      class="justify-center items-center rounded-full w-8 h-8 left-0 hidden md:hidden btn"
       @click="goBack"
       v-if="scroll > 0"
     >
@@ -16,7 +16,7 @@
       </svg>
     </button>
     <button
-      class="justify-center items-center rounded-full w-8 h-8 btn hidden right-0"
+      class="justify-center items-center rounded-full w-8 h-8 btn hidden right-0 md:hidden"
       @click="goForward"
       v-if="scroll !== scrollMax"
     >
@@ -52,6 +52,11 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@screen xl {
+  .wpo:hover button {
+    display: flex;
+}
+}
 .btn {
   position: absolute;
   top: 50%;
@@ -68,8 +73,5 @@ export default {
     -webkit-appearance: none;
     display: none;
   }
-}
-.w:hover button {
-  display: flex;
 }
 </style>

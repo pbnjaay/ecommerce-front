@@ -24,20 +24,16 @@
 .max-w-90 {
   max-width: 90%;
 }
-.h-52-screen {
-  min-height: 40vh;
+
+.h-ca {
+  height: 50vh;
+}
+@screen xl {
+  .h-ca {
+    height: 70;
+  }
 }
 
-@screen sm {
-  .h-52-screen {
-    min-height: 100vh;
-  } 
-}
-@screen md {
-  .h-52-screen {
-    min-height: 50vh;
-  } 
-}
 .min-w-drop {
   min-width: 16rem;
 }

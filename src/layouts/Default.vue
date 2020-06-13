@@ -6,12 +6,12 @@
       <slot />
       <a
         href="#top"
-        class="xl:hidden flex flex-col justify-center items-center text-dark bg-gray-400"
+        class="xl:hidden flex flex-col justify-center items-center text-bg-gray-400 uppercase text-sm"
       >
         <svg class="w-4 h-4 cursor-pointer stroke-current text-sm py-px">
           <use xlink:href="@/assets/svg/sprite.svg#chevron-up-outline" />
         </svg>
-        Haut de page
+        Haut de la page
       </a>
       <a
         href="#top"

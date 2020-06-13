@@ -1,7 +1,7 @@
 <template>
-  <div class="caroussel h-52-screen relative">
+  <div class="caroussel w-full h-ca relative">
     <button
-      class="justify-center items-center rounded-full w-8 h-8 left-0 hidden btn"
+      class="justify-center items-center rounded-full w-8 h-8 hidden btn prev"
       @click="goBack"
       v-if="nav && activeSlide > 1"
     >
@@ -10,7 +10,7 @@
       </svg>
     </button>
     <button
-      class="justify-center items-center rounded-full w-8 h-8 btn hidden right-0"
+      class="justify-center items-center rounded-full w-8 h-8 btn hidden next"
       @click="goForward"
       v-if="nav && activeSlide !== slides"
     >
@@ -82,13 +82,21 @@ export default {
   left: 50%;
   z-index: 2;
 }
-.caroussel:hover button {
-  display: flex;
+@screen xl {
+  .caroussel:hover button {
+    display: flex;
+}
+}
+.next {
+  right: 5px;
+}
+.prev {
+  left: 5px;
 }
 .btn {
   position: absolute;
   top: 50%;
-  z-index: 50;
+  z-index: 2;
   background-color: rgba(0, 0, 0, 0.5);
   &:focus {
     outline: none;
