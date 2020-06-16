@@ -14,7 +14,7 @@
     </div>
     <transition name="show" mode="out-in">
       <nav
-        class="fixed bg-white z-50 ws-84 top-0 left-0 bottom-0"
+        class="fixed px-2 bg-white z-50 ws-84 top-0 left-0 bottom-0"
         v-if="isShow"
       >
         <slot />
@@ -46,14 +46,14 @@ export default {
   right: 5%;
 }
 .show-enter-active {
-  transition: all 250ms cubic-bezier(0.36, 0.74, 0.53, 1.02);
+  transition: all 250ms cubic-bezier(0.47, 0, 0.53, 1);
 }
 .show-leave-active {
-  transition: all 250ms cubic-bezier(0.36, 0.74, 0.53, 1.02);
+  transition: all 250ms cubic-bezier(0.47, 0, 0.53, 1);
 }
 .show-enter,
 .show-leave-to {
-  transform: translateX(-200px);
+  transform: translateX(-300px);
   opacity: 0;
 }
 </style>

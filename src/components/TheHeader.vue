@@ -2,9 +2,11 @@
   <header
     class="hidden sticky top-0 z-50 xl:flex items-center justify-between w-full h-20 shadow px-12 bg-white"
   >
-    <span class="border border-dark rounded font-bold">
-      CHON&trade;
-    </span>
+    <router-link :to="{ name: 'Home' }">
+      <span class="border border-dark rounded font-bold">
+        CHON&trade;
+      </span>
+    </router-link>
     <nav class="w-2/3 flex-grow">
       <div class="flex items-center space-x-2 justify-end">
         <v-dropdown name="Categories">
@@ -67,15 +69,3 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
-.router-link-active {
-  @apply border;
-  @apply border-transparent;
-}
-.router-link-active:focus {
-  @apply border-white;
-}
-.router-link-active:hover {
-  @apply text-primary;
-}
-</style>

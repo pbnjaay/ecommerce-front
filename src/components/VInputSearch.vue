@@ -2,7 +2,7 @@
   <div class="flex justify-center shadow rounded">
     <input
       type="text"
-      class="rounded focus:outline-none bg-gray2 px-2 py-2 -mr-8 w-full"
+      class="rounded focus:outline-none bg-gray2 px-2 py-2 -mr-8 w-full font-sans"
       v-bind="$attrs"
       v-on="inputListeners"
       title="Rechercher un produit"

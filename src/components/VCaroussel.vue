@@ -1,7 +1,7 @@
 <template>
-  <div class="caroussel w-full h-ca relative">
+  <section class="caroussel w-full h-ca relative">
     <button
-      class="justify-center items-center rounded-full w-8 h-8 hidden btn prev"
+      class="justify-center items-center rounded-full w-10 h-10 hidden btn prev"
       @click="goBack"
       v-if="nav && activeSlide > 1"
     >
@@ -10,7 +10,7 @@
       </svg>
     </button>
     <button
-      class="justify-center items-center rounded-full w-8 h-8 btn hidden next"
+      class="justify-center items-center rounded-full w-10 h-10 btn hidden next"
       @click="goForward"
       v-if="nav && activeSlide !== slides"
     >
@@ -28,7 +28,7 @@
       ></span>
     </div>
     <slot />
-  </div>
+  </section>
 </template>
 
 <script>

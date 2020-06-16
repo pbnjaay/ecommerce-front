@@ -1,13 +1,14 @@
 <template>
   <div
-    class="pro w-1/2 xl:w-1/6 overflow-hidden self-auto flex-shrink-0 cursor-pointer"
+    v-if="imageUrl"
+    class="pro flex flex-col justify-center items-center w-1/2 xl:w-1/6 overflow-hidden flex-shrink-0 cursor-pointer text-center xl:text-left"
   >
     <img class="w-full" :srcset="imageUrl" :alt="name" />
-    <div class="p-2">
-      <h3 class="xl:text-base clamp-1">
+    <div>
+      <h3 class="xl:text-base text-sm clamp-1">
         {{ name }}
       </h3>
-      <p class="xl:text-lg font-semibold">{{ price }} FCFA</p>
+      <p class="xl:text-base text-sm font-medium">{{ price }} FCFA</p>
     </div>
   </div>
 </template>

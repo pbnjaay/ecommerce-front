@@ -1,13 +1,15 @@
 <template>
-  <div class="wpo w-full bg-white relative px-2">
-    <header class="h-8">
-      <h1 class="text-lg font-semibold">{{ titre }}</h1>
+  <section
+    class="wpo shadow rounded border border-transparent py-2 px-2 w-full bg-white relative"
+  >
+    <header class="flex justify-between">
+      <h2 class="pb-2 xl:text-xl text-lg font-semibold">{{ titre }}</h2>
     </header>
     <div class="scrl flex" ref="caroussel">
       <slot />
     </div>
     <button
-      class="justify-center items-center rounded-full w-8 h-8 left-0 hidden md:hidden btn"
+      class="justify-center items-center rounded-full w-10 h-10 left-0 hidden md:hidden btn"
       @click="goBack"
       v-if="scroll > 0"
     >
@@ -16,15 +18,15 @@
       </svg>
     </button>
     <button
-      class="justify-center items-center rounded-full w-8 h-8 btn hidden right-0 md:hidden"
+      class="justify-center items-center rounded-full w-10 h-10 btn hidden right-0 md:hidden"
       @click="goForward"
-      v-if="scroll !== scrollMax"
+      v-if="scrollMax - scroll >= 1"
     >
       <svg class="w-5 h-5 cursor-pointer stroke-current text-white">
         <use xlink:href="@/assets/svg/sprite.svg#chevron-forward-outline" />
       </svg>
     </button>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -55,7 +57,7 @@ export default {
 @screen xl {
   .wpo:hover button {
     display: flex;
-}
+  }
 }
 .btn {
   position: absolute;
@@ -66,9 +68,10 @@ export default {
   }
 }
 .scrl {
-  overflow-x: scroll;
+  overflow: scroll;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  scrollbar-width: none;
   &::-webkit-scrollbar {
     -webkit-appearance: none;
     display: none;

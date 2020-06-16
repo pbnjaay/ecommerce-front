@@ -1,5 +1,5 @@
 <template>
-  <footer class="hidden xl:flex flex-col bg-dark py-4 space-y-10 px-12">
+  <footer class="hidden mt-auto xl:flex flex-col bg-dark py-4 space-y-10 px-12">
     <span class="border text-white rounded self-start font-bold">
       CHON&trade;
     </span>
