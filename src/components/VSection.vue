@@ -13,7 +13,7 @@
         </svg>
       </router-link>
     </header>
-    <div class="flex flex-wrap">
+    <div class="flex flex-wrap items-center xl:items-start pb-2 justify-center">
       <slot />
     </div>
   </section>

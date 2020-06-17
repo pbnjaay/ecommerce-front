@@ -13,16 +13,18 @@
         >
           <i class="burger"></i>
         </button>
-        <span class="text-sm border border-dark rounded font-bold">
-          CHON&trade;
-        </span>
+        <router-link :to="{ name: 'Home' }">
+          <span class="text-sm border border-dark rounded font-bold">
+            CHON&trade;
+          </span>
+        </router-link>
       </div>
       <nav class="w-2/3 flex-grow">
         <div class="flex items-center space-x-6 justify-end">
           <router-link
             aria-hidden="true"
             class="flex items-center"
-            :to="{ name: 'Home' }"
+            :to="{ name: 'Login' }"
           >
             <svg class="w-6 h-6 cursor-pointer stroke-current">
               <use xlink:href="@/assets/svg/sprite.svg#person-outline" />
@@ -31,7 +33,7 @@
           <router-link
             aria-hidden="true"
             class="flex items-center"
-            :to="{ name: 'Home' }"
+            :to="{ name: 'ShoppingCart' }"
           >
             <span class="flex" :nbr="nbr" :class="{ cartBadge: nbr > 0 }">
               <svg class="w-6 h-6 cursor-pointer stroke-current">

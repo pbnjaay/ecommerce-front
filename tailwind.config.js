@@ -16,16 +16,16 @@ module.exports = {
       }
     },
     screens: {
-      'sm': '599px',
+      sm: "599px",
       // => @media (min-width: 640px) { ... }
 
-      'md': '600px',
+      md: "600px",
       // => @media (min-width: 768px) { ... }
 
-      'lg': '900px',
+      lg: "900px",
       // => @media (min-width: 1024px) { ... }
 
-      'xl': '1200px',
+      xl: "1200px"
       // => @media (min-width: 1280px) { ... }
     }
   },

@@ -23,9 +23,18 @@
     <transition name="drop">
       <div
         v-if="isShow"
-        class="absolute bg-white shadow-md rounded min-w-drop max-w-drop py-2 overflow-hidden z-20"
+        class="absolute flex flex-col min-h-full bg-white shadow-md rounded w-full min-w-drop pt-2 z-20 max-h-drop"
+        :class="{ 'pb-2': !footer }"
       >
-        <slot></slot>
+        <div :class="{ 'overflow-y-auto': overflow }">
+          <slot></slot>
+        </div>
+        <div
+          v-if="footer"
+          class="flex flex-col items-center sticky space-y-2 bottom-0 mt-auto bg-gray2 py-2"
+        >
+          <slot name="footer"></slot>
+        </div>
       </div>
     </transition>
   </div>
@@ -39,6 +48,16 @@ export default {
     name: {
       type: String,
       required: true
+    },
+    overflow: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    footer: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   }
 };

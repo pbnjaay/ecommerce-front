@@ -1,27 +1,9 @@
 <template>
-  <div id="login">
-    <v-button :style="{ color: '#fff' }" @click="login">Login</v-button>
-  </div>
+  <p>Login</p>
 </template>
 
 <script>
-import VButton from "@/components/VButton";
-export default {
-  components: {
-    VButton
-  },
-  methods: {
-    login() {
-      let returnUrl = this.$route.query.redirect ?? "/";
-      this.$store.dispatch("login", returnUrl);
-    }
-  }
-};
+export default {};
 </script>
 
-<style lang="scss">
-#id {
-  display: flex;
-  align-items: center;
-}
-</style>
+<style></style>

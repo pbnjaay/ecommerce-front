@@ -10,7 +10,7 @@
     </v-caroussel>
     <v-hscroll titre="Recommandé pour vous">
       <product-card
-        class=" w-5/12"
+        class="w-5/12"
         v-for="i in 15"
         :key="i"
         imageUrl="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MWYK2?wid=2000&hei=2000&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1567304928359"
@@ -20,7 +20,7 @@
     </v-hscroll>
     <v-section titre="Ordinateurs et Imprimantes">
       <product-card
-        v-for="i in 4"
+        v-for="i in 6"
         :key="i"
         imageUrl="https://frandiscount.com/wp-content/uploads/2020/03/Apple-MacBook-Air-MQD32FN-A-2017-133-Intel-Core-i5-8Go-RAM-128Go-SSD-Argent-4.jpg"
         :price="760000"
@@ -29,7 +29,7 @@
     </v-section>
     <v-section titre="Tablettes">
       <product-card
-        v-for="i in 4"
+        v-for="i in 6"
         :key="i"
         imageUrl="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-mini-select-201911_FMT_WHH?wid=2000&amp;hei=2000&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1573825332486"
         :price="760000"
@@ -38,7 +38,7 @@
     </v-section>
     <v-section titre="Accessoirs">
       <product-card
-        v-for="i in 4"
+        v-for="i in 6"
         :key="i"
         imageUrl="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MWP22?wid=1144&hei=1144&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1572990352299"
         :price="160000"

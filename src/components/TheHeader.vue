@@ -28,13 +28,19 @@
               <use xlink:href="@/assets/svg/sprite.svg#person-outline" />
             </svg>
           </template>
-          <ul>
-            <li><v-item>sa hgj</v-item></li>
-            <li><v-item>sa hgj</v-item></li>
-            <li><v-item>sa hgj</v-item></li>
-          </ul>
+          <div class="flex flex-col items-center space-y-4">
+            <router-link :to="{ name: 'Login' }">
+              <v-button>Se connecter</v-button>
+            </router-link>
+            <hr class="sep text-gray-400 w-full h-px text-center" />
+            <button
+              class="focus:outline-none text-primary uppercase hover:bg-gray-300 rounded px-1 py-1 text-sm"
+            >
+              Creer un compte
+            </button>
+          </div>
         </v-dropdown>
-        <v-dropdown name="Panier">
+        <v-dropdown name="Panier" :overflow="true" :footer="true">
           <template #icon>
             <span class="flex" :nbr="nbr" :class="{ cartBadge: nbr > 0 }">
               <svg class="w-6 h-6 cursor-pointer stroke-current mr-2">
@@ -45,6 +51,24 @@
           <div v-if="nbr === 0" class="px-2 text-center p-4">
             Votre panier est vide
           </div>
+          <div v-if="nbr">
+            <v-cart-item
+              v-for="i in 5"
+              :key="i"
+              name="Apple MacBook Air"
+              :price="700000"
+              imageUrl="https://frandiscount.com/wp-content/uploads/2020/03/Apple-MacBook-Air-MQD32FN-A-2017-133-Intel-Core-i5-8Go-RAM-128Go-SSD-Argent-4.jpg"
+            ></v-cart-item>
+          </div>
+          <template #footer v-if="nbr">
+            <div>
+              <span>Total:</span>
+              <span class="font-bold"> 2000000 FCFA</span>
+            </div>
+            <router-link :to="{ name: 'ShoppingCart' }">
+              <v-button>aller au panier</v-button>
+            </router-link>
+          </template>
         </v-dropdown>
       </div>
     </nav>
@@ -55,17 +79,30 @@
 import VInputSearch from "@/components/VInputSearch.vue";
 import VDropdown from "@/components/VDropdown.vue";
 import VItem from "@/components/VItem.vue";
+import VButton from "@/components/VButton.vue";
+import VCartItem from "@/components/VCartItem.vue";
 
 export default {
   components: {
     VInputSearch,
     VDropdown,
-    VItem
+    VItem,
+    VButton,
+    VCartItem
   },
   data() {
     return {
-      nbr: 0
+      nbr: 5
     };
   }
 };
 </script>
+<style lang="scss" scoped>
+.sep::after {
+  background: #fff;
+  content: "ou";
+  padding: 0 4px;
+  position: relative;
+  top: -15px;
+}
+</style>
