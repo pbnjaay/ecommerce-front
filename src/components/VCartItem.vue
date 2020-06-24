@@ -8,7 +8,7 @@
     </div>
     <div>
       <h3 class="text-xs clamp-1">
-        {{ name }}
+        {{ name | titleCase }}
       </h3>
       <p class="xl:text-base text-xs font-medium">{{ price }} FCFA</p>
     </div>

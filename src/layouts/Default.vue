@@ -15,7 +15,7 @@
         </svg>
         Haut de la page
       </a>
-      <div class="absolute top-0 z-30 contain">
+      <div class="absolute top-0 z-30 contain" v-if="this.$route.path === '/'">
         <a
           href="#top"
           class="pos hidden xl:flex items-center justify-center w-10 h-10 rounded-full text-black shadow bg-white"
@@ -59,7 +59,7 @@ export default {
 }
 .contain {
   padding-top: 100vh;
-  right: 8px;
+  right: 4px;
   bottom: -32px;
 }
 </style>

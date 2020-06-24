@@ -1,20 +1,22 @@
 <template>
   <div>
-    <div
-      class="fixed right-0 bottom-0 top-0 w-full backdrop z-10"
-      v-if="isShow"
-      v-on="navListener"
-    >
-      <button
-        class="btnClose flex items-center justify-center bg-white rounded-full absolute w-6 h-6 cursor-pointer focus:outline-none "
-        aria-label="fermer"
+    <transition name="fade" mode="out-in">
+      <div
+        class="fixed right-0 bottom-0 top-0 w-full backdrop z-10"
+        v-if="isShow"
+        v-on="navListener"
       >
-        <i class="close"></i>
-      </button>
-    </div>
+        <button
+          class="btnClose flex items-center justify-center bg-white rounded-full absolute w-6 h-6 cursor-pointer focus:outline-none "
+          aria-label="fermer"
+        >
+          <i class="close"></i>
+        </button>
+      </div>
+    </transition>
     <transition name="show" mode="out-in">
       <nav
-        class="fixed px-2 bg-white z-50 ws-84 top-0 left-0 bottom-0"
+        class="nav fixed px-2 bg-white z-50 ws-84 top-0 left-0 bottom-0"
         v-if="isShow"
       >
         <slot />
@@ -46,14 +48,27 @@ export default {
   right: 5%;
 }
 .show-enter-active {
-  transition: all 250ms cubic-bezier(0.47, 0, 0.53, 1);
+  transition: all 250ms ease-in-out;
 }
 .show-leave-active {
-  transition: all 250ms cubic-bezier(0.47, 0, 0.53, 1);
+  transition: all 250ms ease-in-out;
 }
 .show-enter,
 .show-leave-to {
   transform: translateX(-300px);
   opacity: 0;
+}
+.fade-enter-active {
+  transition: all 500ms ease-in;
+}
+.fade-leave-active {
+  transition: all 250ms ease-out;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.nav {
+  will-change: transform;
 }
 </style>

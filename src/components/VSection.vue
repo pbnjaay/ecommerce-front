@@ -5,6 +5,7 @@
         {{ titre }}
       </h2>
       <router-link
+        v-if="vp"
         class="flex items-center text-primary text-xs uppercase font-semibold"
         :to="{ name: 'Home' }"
         >voir plus
@@ -25,6 +26,10 @@ export default {
     titre: {
       type: String,
       required: true
+    },
+    vp: {
+      type: Boolean,
+      default: false
     }
   }
 };

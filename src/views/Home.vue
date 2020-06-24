@@ -14,11 +14,11 @@
         v-for="i in 15"
         :key="i"
         imageUrl="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MWYK2?wid=2000&hei=2000&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1567304928359"
-        :price="360000"
+        :price="3600000"
         name="Iphone 11 pro 2020"
       ></product-card>
     </v-hscroll>
-    <v-section titre="Ordinateurs et Imprimantes">
+    <v-section :vp="true" titre="Ordinateurs et Imprimantes">
       <product-card
         v-for="i in 6"
         :key="i"
@@ -27,7 +27,7 @@
         name="Apple MacBook Air 2017"
       ></product-card>
     </v-section>
-    <v-section titre="Tablettes">
+    <v-section :vp="true" titre="Tablettes">
       <product-card
         v-for="i in 6"
         :key="i"
@@ -36,13 +36,13 @@
         name="Apple MacBook Air 2017"
       ></product-card>
     </v-section>
-    <v-section titre="Accessoirs">
+    <v-section :vp="true" titre="Accessoirs">
       <product-card
         v-for="i in 6"
         :key="i"
         imageUrl="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MWP22?wid=1144&hei=1144&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1572990352299"
         :price="160000"
-        name="Apple Airpod 2"
+        name="apple airpod 2"
       ></product-card>
     </v-section>
   </div>
