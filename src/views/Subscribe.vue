@@ -8,13 +8,29 @@
       <div
         class="h-16 flex items-center justify-center text-primary text-2xl font-semibold"
       >
-        Se connecter
+        S'inscrire
       </div>
       <form class="flex flex-col justify-center w-full">
         <v-input
+          type="text"
+          required
+          placeholder="Nom"
+          name="nom"
+          label="nom"
+          id="nom"
+        />
+        <v-input
+          type="text"
+          required
+          placeholder="Prenom"
+          name="prenom"
+          label="prenom"
+          id="prenom"
+        />
+        <v-input
           type="email"
           required
-          autocomplete="email"
+          autocomplete="off"
           placeholder="E-mail"
           name="email"
           label="Email"
@@ -28,7 +44,7 @@
           label="Mot de passe"
           id="pwd"
         />
-        <v-button>Connexion</v-button>
+        <v-button>Inscription</v-button>
       </form>
       <hr class="sep text-gray-400 w-full h-px text-center" />
       <button class=" flex justify-center focus:outline-none">
@@ -36,23 +52,18 @@
           <svg class="mr-2 w-4 h-4 cursor-pointer fill-current">
             <use xlink:href="@/assets/svg/sprite.svg#logo-facebook" />
           </svg>
-          Se connecter avec Facebook
+          S'inscrire avec Facebook
         </span>
-      </button>
-      <button
-        class=" flex justify-center focus:outline-none text-primary text-sm"
-      >
-        Mot de passe oublie ?
       </button>
     </div>
     <div
       class="flex bg-white w-full justify-center p-4 font-light shadow rounded"
     >
-      Vous n'avez pas de compte ?
+      Vous avez deja un compte ?
       <router-link
-        :to="{ name: 'Subscribe' }"
+        :to="{ name: 'Login' }"
         class="ml-2 text-primary font-semibold"
-        >inscrivez vous</router-link
+        >Connetez-vous</router-link
       >
     </div>
   </div>

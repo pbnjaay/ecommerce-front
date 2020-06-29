@@ -63,17 +63,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.drop-enter-active {
-  transition: all 250ms cubic-bezier(0.36, 0.74, 0.53, 1.02);
-}
-.drop-leave-active {
-  transition: all 250ms cubic-bezier(0.36, 0.74, 0.53, 1.02);
-}
-.drop-enter,
-.drop-leave-to {
-  transform: translateY(-10px);
-  opacity: 0;
-}
 .btnD {
   position: relative;
   z-index: 1;

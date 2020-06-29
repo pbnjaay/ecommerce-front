@@ -29,6 +29,8 @@ module.exports = {
       // => @media (min-width: 1280px) { ... }
     }
   },
-  variants: {},
+  variants: {
+    borderColor: ["responsive", "focus-within", "hover", "focus"]
+  },
   plugins: []
 };

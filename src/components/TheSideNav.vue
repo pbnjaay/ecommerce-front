@@ -7,7 +7,7 @@
         v-on="navListener"
       >
         <button
-          class="btnClose flex items-center justify-center bg-white rounded-full absolute w-6 h-6 cursor-pointer focus:outline-none "
+          class="btnClose flex items-center justify-center bg-white rounded-full absolute w-8 h-8 cursor-pointer focus:outline-none "
           aria-label="fermer"
         >
           <i class="close"></i>
@@ -44,7 +44,7 @@ export default {
 
 <style lang="scss" scoped>
 .btnClose {
-  top: 8%;
+  top: 50%;
   right: 5%;
 }
 .show-enter-active {

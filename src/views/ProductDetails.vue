@@ -51,7 +51,7 @@
           </div>
           <hr class="text-gray-200 w-full h-px text-center" />
           <p class="xl:text-2xl text-xl font-semibold">800 500 FCFA</p>
-          <v-button :icon="true" class="flex items-center justify-center">
+          <v-button :icon="true" class="flex items-center justify-center py-3">
             <svg class="w-4 h-4 mr-2 cursor-pointer stroke-current">
               <use xlink:href="@/assets/svg/sprite.svg#cart-outline" />
             </svg>

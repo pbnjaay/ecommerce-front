@@ -9,6 +9,7 @@
       <a
         href="#top"
         class="xl:hidden mt-auto flex flex-col justify-center items-center text-bg-gray-400 uppercase text-sm"
+        v-if="this.$route.path === '/'"
       >
         <svg class="w-4 h-4 cursor-pointer stroke-current text-sm py-px">
           <use xlink:href="@/assets/svg/sprite.svg#chevron-up-outline" />

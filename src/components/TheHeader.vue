@@ -33,11 +33,13 @@
               <v-button>Se connecter</v-button>
             </router-link>
             <hr class="sep text-gray-400 w-full h-px text-center" />
-            <button
-              class="focus:outline-none text-primary uppercase hover:bg-gray-300 rounded px-1 py-1 text-sm"
-            >
-              Creer un compte
-            </button>
+            <router-link :to="{ name: 'Subscribe' }">
+              <button
+                class="focus:outline-none text-primary uppercase hover:bg-gray-300 rounded px-1 py-1 text-sm"
+              >
+                Creer un compte
+              </button>
+            </router-link>
           </div>
         </v-dropdown>
         <v-dropdown name="Panier" :overflow="true" :footer="true">
@@ -97,7 +99,7 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .sep::after {
   background: #fff;
   content: "ou";
