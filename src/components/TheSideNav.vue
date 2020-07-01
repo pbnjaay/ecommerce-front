@@ -16,7 +16,7 @@
     </transition>
     <transition name="show" mode="out-in">
       <nav
-        class="nav fixed px-2 bg-white z-50 ws-84 top-0 left-0 bottom-0"
+        class="nav fixed bg-white z-50 ws-84 top-0 left-0 bottom-0"
         v-if="isShow"
       >
         <slot />

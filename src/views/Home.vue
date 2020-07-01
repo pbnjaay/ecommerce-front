@@ -1,5 +1,5 @@
 <template>
-  <div class="home flex flex-col xl:space-y-5 space-y-6 xl:py-4 py-2 xl:mx-12">
+  <div class="home flex flex-col xl:space-y-3 space-y-2 xl:py-4 py-2 xl:mx-12">
     <v-caroussel :slides="2" :indic="true" :nav="true">
       <v-caroussel-item :id="1">
         <div class="h-full text-center bg-red-700">Annonce 1</div>

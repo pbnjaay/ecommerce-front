@@ -48,7 +48,7 @@
     <rect x="32" y="80" width="448" height="256" rx="16" ry="16" transform="rotate(180 256 208)" stroke-linejoin="round" stroke-width="32"></rect>
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M64 384h384M96 432h320"></path>
     <circle cx="256" cy="208" r="80" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></circle>
-    <path d="M480 160a80 80 0 0 1-80-80M32 160a80 80 0 0 0 80-80m368 176a80 80 0 0 0-80 80M32 256a80 80 0 0 1 80 80" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></path>
+    <path d="M480 160a80 80 0 0 1-80-80M32 160a80 80 0 0 0 80-80m368 176a80 80 0 0 0-80 80M32 256a80 80 0 0 1 80 80" fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></path>
   </symbol>
   <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="grid-outline">
     <title>ionicons-v5-i</title>
@@ -60,5 +60,50 @@
     <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="star-outline">
     <title>ionicons-v5-e</title>
     <path d="M480 208H308L256 48l-52 160H32l140 96-54 160 138-100 138 100-54-160z" fill="none" stroke-linejoin="round" stroke-width="32"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="add-outline">
+    <title>ionicons-v5-a</title>
+    <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 112v288m144-144H112"></path>
+  </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="desktop-outline">
+    <title>ionicons-v5-h</title>
+    <rect x="32" y="64" width="448" height="320" rx="32" ry="32" fill="none"  stroke-linejoin="round" stroke-width="32"></rect>
+    <path  stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M304 448l-8-64h-80l-8 64h96z"></path>
+    <path fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 448H144"></path>
+    <path d="M32 304v48a32.09 32.09 0 0 0 32 32h384a32.09 32.09 0 0 0 32-32v-48zm224 64a16 16 0 1 1 16-16 16 16 0 0 1-16 16z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="hardware-chip-outline">
+    <title>ionicons-v5-l</title>
+    <rect x="80" y="80" width="352" height="352" rx="48" ry="48" fill="none"  stroke-linejoin="round" stroke-width="32"></rect>
+    <rect x="144" y="144" width="224" height="224" rx="16" ry="16" fill="none"  stroke-linejoin="round" stroke-width="32"></rect>
+    <path fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 80V48m80 32V48M176 80V48m80 416v-32m80 32v-32m-160 32v-32m256-176h32m-32 80h32m-32-160h32M48 256h32m-32 80h32M48 176h32"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="file-tray-stacked-outline">
+    <title>ionicons-v5-i</title>
+    <path d="M48 336v96a48.14 48.14 0 0 0 48 48h320a48.14 48.14 0 0 0 48-48v-96" fill="none"  stroke-linejoin="round" stroke-width="32"></path>
+    <path fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M48 336h144m128 0h144m-272 0a64 64 0 0 0 128 0"></path>
+    <path d="M384 32H128c-26 0-43 14-48 40L48 192v96a48.14 48.14 0 0 0 48 48h320a48.14 48.14 0 0 0 48-48v-96L432 72c-5-27-23-40-48-40z" fill="none"  stroke-linejoin="round" stroke-width="32"></path>
+    <path fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M48 192h144m128 0h144m-272 0a64 64 0 0 0 128 0"></path>
+  </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="phone-portrait-outline">
+    <title>ionicons-v5-k</title>
+    <rect x="128" y="16" width="256" height="480" rx="48" ry="48" fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></rect>
+    <path d="M176 16h24a8 8 0 0 1 8 8 16 16 0 0 0 16 16h64a16 16 0 0 0 16-16 8 8 0 0 1 8-8h24" fill="none"  stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="cube-outline">
+    <title>ionicons-v5-h</title>
+    <path d="M448 341.37V170.61A32 32 0 0 0 432.11 143l-152-88.46a47.94 47.94 0 0 0-48.24 0L79.89 143A32 32 0 0 0 64 170.61v170.76A32 32 0 0 0 79.89 369l152 88.46a48 48 0 0 0 48.24 0l152-88.46A32 32 0 0 0 448 341.37z" fill="none"
+      stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></path>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M69 153.99l187 110 187-110m-187 310v-200"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="log-out-outline">
+    <title>ionicons-v5-o</title>
+    <path d="M304 336v40a40 40 0 0 1-40 40H104a40 40 0 0 1-40-40V136a40 40 0 0 1 40-40h152c22.09 0 48 17.91 48 40v40m64 160l80-80-80-80m-192 80h256" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></path>
+  </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="hand-right-outline">
+    <title>ionicons-v5-i</title>
+    <path d="M432 320V144a32 32 0 0 0-32-32 32 32 0 0 0-32 32v112m0 0V80a32 32 0 0 0-32-32 32 32 0 0 0-32 32v160m-64 1V96a32 32 0 0 0-32-32 32 32 0 0 0-32 32v224m128-80V48a32 32 0 0 0-32-32 32 32 0 0 0-32 32v192" fill="none" stroke="#000"
+      stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></path>
+    <path d="M432 320c0 117.4-64 176-152 176s-123.71-39.6-144-88L83.33 264c-6.66-18.05-3.64-34.79 11.87-43.6 15.52-8.82 35.91-4.28 44.31 11.68L176 320" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></path>
   </symbol>
 </svg>

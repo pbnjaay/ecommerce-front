@@ -65,20 +65,6 @@
             <router-link
               class="focus:text-white hover:text-white transition duration-150"
               :to="{ name: 'Home' }"
-              >Carrières</router-link
-            >
-          </li>
-          <li>
-            <router-link
-              class="focus:text-white hover:text-white transition duration-150"
-              :to="{ name: 'Home' }"
-              >Propriété intellectuelle</router-link
-            >
-          </li>
-          <li>
-            <router-link
-              class="focus:text-white hover:text-white transition duration-150"
-              :to="{ name: 'Home' }"
               >Politique de Confidentialité</router-link
             >
           </li>
@@ -98,33 +84,30 @@
       </div>
       <div class="space-y-4">
         <span class="font-bold text-white uppercase">RETROUVEZ-NOUS SUR</span>
-        <div class="text-gray-400 text-xs space-y-1">
+        <div class="flex text-gray-400 text-xs">
           <router-link
             class="flex items-center focus:text-white hover:text-white transition duration-150"
             :to="{ name: 'Home' }"
           >
-            <svg class="mr-2 w-4 h-4 cursor-pointer fill-current">
+            <svg class="mr-2 w-5 h-5 cursor-pointer fill-current">
               <use xlink:href="@/assets/svg/sprite.svg#logo-twitter" />
             </svg>
-            Twitter
           </router-link>
           <router-link
             class="flex items-center focus:text-white hover:text-white transition duration-150"
             :to="{ name: 'Home' }"
           >
-            <svg class="mr-2 w-4 h-4 cursor-pointer fill-current">
+            <svg class="mr-2 w-5 h-5 cursor-pointer fill-current">
               <use xlink:href="@/assets/svg/sprite.svg#logo-facebook" />
             </svg>
-            Facebook
           </router-link>
           <router-link
             class="flex items-center focus:text-white hover:text-white transition duration-150"
             :to="{ name: 'Home' }"
           >
-            <svg class="mr-2 w-4 h-4 cursor-pointer fill-current">
+            <svg class="mr-2 w-5 h-5 cursor-pointer fill-current">
               <use xlink:href="@/assets/svg/sprite.svg#logo-instagram" />
             </svg>
-            Instagram
           </router-link>
         </div>
       </div>

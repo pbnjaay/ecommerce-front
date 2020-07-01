@@ -30,7 +30,117 @@
     </main>
     <TheFooter />
     <TheFooterMobile />
-    <the-side-nav :isShow="isShow" @click="showMenu"> </the-side-nav>
+    <the-side-nav :isShow="isShow" @click="showMenu">
+      <div
+        class="flex flex-col divide-gray-300 divide-y text-sm space-y-2"
+        @click="showMenu"
+      >
+        <div class="flex items-center space-x-3 px-4 py-2">
+          <svg class="w-5 h-5 cursor-pointer stroke-current">
+            <use xlink:href="@/assets/svg/sprite.svg#person-outline" />
+          </svg>
+          <router-link :to="{ name: 'Login' }" class="font-semibold text-lg">
+            Bonjour, identifiez-vous
+          </router-link>
+        </div>
+        <ul class="con">
+          <li
+            class="uppercase font-semibold text-primary flex w-full justify-between"
+          >
+            <router-link :to="{ name: 'Home' }">
+              Votre compte
+            </router-link>
+            <svg class="w-5 h-5 cursor-pointer stroke-current">
+              <use
+                xlink:href="@/assets/svg/sprite.svg#chevron-forward-outline"
+              />
+            </svg>
+          </li>
+          <li class="flex space-x-3">
+            <svg class="w-5 h-5 cursor-pointer stroke-current">
+              <use
+                xlink:href="@/assets/svg/sprite.svg#file-tray-stacked-outline"
+              />
+            </svg>
+            <router-link :to="{ name: 'MyOrders' }">
+              Vos commandes
+            </router-link>
+          </li>
+          <li class="flex space-x-3">
+            <svg class="w-5 h-5 cursor-pointer stroke-current">
+              <use xlink:href="@/assets/svg/sprite.svg#hand-right-outline" />
+            </svg>
+            <router-link :to="{ name: 'AdminProduct' }">
+              Gerer vos produits
+            </router-link>
+          </li>
+          <li class="flex space-x-3">
+            <svg class="w-5 h-5 cursor-pointer stroke-current">
+              <use xlink:href="@/assets/svg/sprite.svg#hand-right-outline" />
+            </svg>
+            <router-link :to="{ name: 'AdminOrder' }">
+              Gerer vos commandes
+            </router-link>
+          </li>
+          <li class="flex space-x-3">
+            <svg class="w-5 h-5 cursor-pointer stroke-current">
+              <use xlink:href="@/assets/svg/sprite.svg#heart-outline" />
+            </svg>
+            <router-link :to="{ name: 'Home' }">
+              Votre liste d'envies
+            </router-link>
+          </li>
+        </ul>
+        <ul class="con">
+          <li
+            class="uppercase font-semibold text-primary flex w-full justify-between"
+          >
+            <router-link :to="{ name: 'Home' }">
+              Nos categories
+            </router-link>
+            <svg class="w-5 h-5 cursor-pointer stroke-current">
+              <use
+                xlink:href="@/assets/svg/sprite.svg#chevron-forward-outline"
+              />
+            </svg>
+          </li>
+          <li class="flex space-x-3">
+            <svg class="w-5 h-5 cursor-pointer stroke-current">
+              <use
+                xlink:href="@/assets/svg/sprite.svg#phone-portrait-outline"
+              />
+            </svg>
+            <router-link :to="{ name: 'Home' }">
+              Téléphones et Tablettes
+            </router-link>
+          </li>
+          <li class="flex space-x-3">
+            <svg class="w-5 h-5 cursor-pointer stroke-current">
+              <use xlink:href="@/assets/svg/sprite.svg#hardware-chip-outline" />
+            </svg>
+            <router-link :to="{ name: 'Home' }">
+              Electronique
+            </router-link>
+          </li>
+          <li class="flex space-x-3">
+            <svg class="w-5 h-5 cursor-pointer stroke-current">
+              <use xlink:href="@/assets/svg/sprite.svg#desktop-outline" />
+            </svg>
+            <router-link :to="{ name: 'Home' }">
+              Informatique
+            </router-link>
+          </li>
+        </ul>
+        <div class="flex items-center space-x-3 px-4 py-2">
+          <svg class="w-5 h-5 cursor-pointer stroke-current">
+            <use xlink:href="@/assets/svg/sprite.svg#log-out-outline" />
+          </svg>
+          <router-link :to="{ name: 'Home' }">
+            Deconnexion
+          </router-link>
+        </div>
+      </div>
+    </the-side-nav>
   </div>
 </template>
 
@@ -62,5 +172,9 @@ export default {
   padding-top: 100vh;
   right: 4px;
   bottom: -32px;
+}
+.con > * {
+  @apply px-4;
+  @apply py-2;
 }
 </style>

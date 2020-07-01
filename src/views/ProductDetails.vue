@@ -6,6 +6,7 @@
       >
         <div class="flex xl:w-4/5 self-start xl:sticky pos">
           <div class="relative">
+          <v-fab class="absolute fab" />
             <img
               src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MWYK2?wid=2000&hei=2000&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1567304928359"
               alt=""
@@ -104,11 +105,13 @@
 import VButton from "@/components/VButton.vue";
 import VSection from "@/components/VSection.vue";
 import ProductCard from "@/components/ProductCard.vue";
+import VFab from "@/components/VFab.vue";
 export default {
   components: {
     VButton,
     VSection,
-    ProductCard
+    ProductCard,
+    VFab
   }
 };
 </script>
@@ -132,5 +135,9 @@ export default {
   top: 50%;
   left: 5%;
   transform: translate(-50%, -50%);
+}
+.fab {
+  top: 5%;
+  right: 5%;
 }
 </style>
