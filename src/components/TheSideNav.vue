@@ -5,14 +5,7 @@
         class="fixed right-0 bottom-0 top-0 w-full backdrop z-10"
         v-if="isShow"
         v-on="navListener"
-      >
-        <button
-          class="btnClose flex items-center justify-center bg-white rounded-full absolute w-8 h-8 cursor-pointer focus:outline-none "
-          aria-label="fermer"
-        >
-          <i class="close"></i>
-        </button>
-      </div>
+      ></div>
     </transition>
     <transition name="show" mode="out-in">
       <nav

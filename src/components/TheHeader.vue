@@ -15,10 +15,35 @@
               <use xlink:href="@/assets/svg/sprite.svg#grid-outline" />
             </svg>
           </template>
-          <ul>
-            <li><v-item>sa hgj</v-item></li>
-            <li><v-item>sa hgj</v-item></li>
-            <li><v-item>sa hgj</v-item></li>
+          <ul class="con">
+            <li class="flex space-x-3">
+              <svg class="w-5 h-5 cursor-pointer stroke-current">
+                <use
+                  xlink:href="@/assets/svg/sprite.svg#phone-portrait-outline"
+                />
+              </svg>
+              <router-link :to="{ name: 'Home' }">
+                Téléphones et Tablettes
+              </router-link>
+            </li>
+            <li class="flex space-x-3">
+              <svg class="w-5 h-5 cursor-pointer stroke-current">
+                <use
+                  xlink:href="@/assets/svg/sprite.svg#hardware-chip-outline"
+                />
+              </svg>
+              <router-link :to="{ name: 'Home' }">
+                Electronique
+              </router-link>
+            </li>
+            <li class="flex space-x-3">
+              <svg class="w-5 h-5 cursor-pointer stroke-current">
+                <use xlink:href="@/assets/svg/sprite.svg#desktop-outline" />
+              </svg>
+              <router-link :to="{ name: 'Home' }">
+                Informatique
+              </router-link>
+            </li>
           </ul>
         </v-dropdown>
         <v-input-search class="w-1/2" placeholder="Rechercher" />
@@ -64,11 +89,11 @@
           </div>
           <template #footer v-if="nbr">
             <div>
-              <span>Total:</span>
-              <span class="font-bold"> 2000000 FCFA</span>
+              <span class=" font-normal text-gray-700">Total: </span>
+              <span class="font-semibold"> 200 000 FCFA</span>
             </div>
             <router-link :to="{ name: 'ShoppingCart' }">
-              <v-button>aller au panier</v-button>
+              <v-button class="w-full">aller au panier</v-button>
             </router-link>
           </template>
         </v-dropdown>
@@ -80,7 +105,7 @@
 <script>
 import VInputSearch from "@/components/VInputSearch.vue";
 import VDropdown from "@/components/VDropdown.vue";
-import VItem from "@/components/VItem.vue";
+// import VItem from "@/components/VItem.vue";
 import VButton from "@/components/VButton.vue";
 import VCartItem from "@/components/VCartItem.vue";
 
@@ -88,7 +113,7 @@ export default {
   components: {
     VInputSearch,
     VDropdown,
-    VItem,
+    // VItem,
     VButton,
     VCartItem
   },
@@ -106,5 +131,9 @@ export default {
   padding: 0 4px;
   position: relative;
   top: -15px;
+}
+.con > * {
+  @apply px-4;
+  @apply py-2;
 }
 </style>

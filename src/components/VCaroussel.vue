@@ -1,5 +1,5 @@
 <template>
-  <section class="caroussel w-full h-ca relative">
+  <section class="caroussel w-full h-ca relative bg-white rounded shadow">
     <button
       class="justify-center items-center rounded-full w-10 h-10 hidden btn prev"
       @click="goBack"

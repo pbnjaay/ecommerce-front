@@ -26,12 +26,12 @@
         class="absolute flex flex-col min-h-full bg-white shadow-md rounded w-full min-w-drop pt-2 z-20 max-h-drop"
         :class="{ 'pb-2': !footer }"
       >
-        <div :class="{ 'overflow-y-auto': overflow }">
+        <div :class="{ scrl: overflow }">
           <slot></slot>
         </div>
         <div
           v-if="footer"
-          class="flex flex-col items-center sticky space-y-2 bottom-0 mt-auto bg-gray2 py-2"
+          class="flex flex-col sticky space-y-2 bottom-0 bg-gray2 py-2 px-4"
         >
           <slot name="footer"></slot>
         </div>
@@ -83,6 +83,21 @@ export default {
     content: "";
     z-index: -1;
     opacity: 0;
+  }
+}
+.scrl {
+  overflow-y: scroll;
+  padding-bottom: 0.5rem;
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
 }
 </style>

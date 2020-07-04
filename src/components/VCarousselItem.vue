@@ -1,7 +1,7 @@
 <template>
   <transition name="slide" mode="in-out">
     <div
-      class="h-full absolute inset-0"
+      class="h-full absolute inset-0 flex justify-center items-center"
       :to="{ name: 'Home' }"
       v-if="activeSlide === id"
       aria-hidden="true"
