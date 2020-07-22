@@ -85,7 +85,7 @@ export default {
 @screen xl {
   .caroussel:hover button {
     display: flex;
-}
+  }
 }
 .next {
   right: 5px;

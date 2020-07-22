@@ -19,39 +19,43 @@
     <v-hscroll titre="Recommandé pour vous">
       <product-card
         class="w-5/12"
-        v-for="i in 15"
-        :key="i"
-        imageUrl="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MWYK2?wid=2000&hei=2000&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1567304928359"
-        :price="3600000"
-        name="Iphone 11 pro 2020"
+        v-for="p in products"
+        :key="p._id"
+        :imageUrl="p.imageUrl"
+        :price="p.price"
+        :name="p.name"
+        :slug="p._id"
       ></product-card>
     </v-hscroll>
     <v-section :vp="true" titre="Ordinateurs et Imprimantes">
       <product-card
-        v-for="i in 6"
-        :key="i"
-        imageUrl="https://frandiscount.com/wp-content/uploads/2020/03/Apple-MacBook-Air-MQD32FN-A-2017-133-Intel-Core-i5-8Go-RAM-128Go-SSD-Argent-4.jpg"
-        :price="760000"
-        name="Apple MacBook Air 2017"
+        v-for="p in getProductByCategory('Ordinateurs et Imprimantes')"
+        :key="p._id"
+        :slug="p._id"
+        :imageUrl="p.imageUrl"
+        :price="p.price"
+        :name="p.name"
       >
       </product-card>
     </v-section>
-    <v-section :vp="true" titre="Tablettes">
+    <v-section :vp="true" titre="Telephones et Tablettes">
       <product-card
-        v-for="i in 6"
-        :key="i"
-        imageUrl="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-mini-select-201911_FMT_WHH?wid=2000&amp;hei=2000&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1573825332486"
-        :price="760000"
-        name="Apple MacBook Air 2017"
+        v-for="p in getProductByCategory('Telephones Tablettes')"
+        :key="p._id"
+        :imageUrl="p.imageUrl"
+        :price="p.price"
+        :name="p.name"
+        :slug="p._id"
       ></product-card>
     </v-section>
     <v-section :vp="true" titre="Accessoirs">
       <product-card
-        v-for="i in 6"
-        :key="i"
-        imageUrl="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MWP22?wid=1144&hei=1144&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1572990352299"
-        :price="160000"
-        name="apple airpod 2"
+        v-for="p in getProductByCategory('Accessoirs')"
+        :key="p._id"
+        :imageUrl="p.imageUrl"
+        :price="p.price"
+        :name="p.name"
+        :slug="p._id"
       ></product-card>
     </v-section>
   </div>
@@ -63,6 +67,10 @@ import VCarousselItem from "@/components/VCarousselItem.vue";
 import VHscroll from "@/components/VHscroll.vue";
 import ProductCard from "@/components/ProductCard.vue";
 import VSection from "@/components/VSection.vue";
+import { createNamespacedHelpers } from "vuex";
+const { mapActions, mapState, mapGetters } = createNamespacedHelpers(
+  "products"
+);
 
 export default {
   name: "Home",
@@ -72,6 +80,23 @@ export default {
     VHscroll,
     ProductCard,
     VSection
+  },
+  computed: {
+    ...mapState({
+      products: state => state.products
+    }),
+    ...mapGetters(["getProductByCategory"])
+  },
+  methods: {
+    ...mapActions(["getAllProducts"])
+  },
+  mounted() {
+    this.getAllProducts();
   }
 };
 </script>
+<style lang="scss">
+.home {
+  scroll-behavior: smooth;
+}
+</style>

@@ -1,5 +1,7 @@
 <template>
-  <section class="shadow bg-white border border-transparent rounded px-2 py-2">
+  <section
+    class="shadow bg-white border border-transparent rounded px-2 py-2 flex-grow"
+  >
     <header class="flex justify-between items-center h-8 pb-2">
       <h2 class="xl:text-xl text-lg font-semibold">
         {{ titre }}
@@ -35,4 +37,4 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped></style>

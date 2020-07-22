@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col items-end space-y-10 relative text-black select-none"
+    class="flex flex-col items-end space-y-12 relative text-black select-none"
   >
     <button
       class="flex font-semibold justify-center items-center px-2 py-2 focus:outline-none"
@@ -23,7 +23,7 @@
     <transition name="drop">
       <div
         v-if="isShow"
-        class="absolute flex flex-col min-h-full bg-white shadow-md rounded w-full min-w-drop pt-2 z-20 max-h-drop"
+        class="absolute flex flex-col bg-white shadow-md rounded min-w-drop  pt-2 z-20 max-h-drop"
         :class="{ 'pb-2': !footer }"
       >
         <div :class="{ scrl: overflow }">
@@ -31,7 +31,7 @@
         </div>
         <div
           v-if="footer"
-          class="flex flex-col sticky space-y-2 bottom-0 bg-gray2 py-2 px-4"
+          class="flex flex-col sticky space-y-2 bottom-0 border-t-2 py-2 px-4"
         >
           <slot name="footer"></slot>
         </div>
@@ -93,7 +93,7 @@ export default {
   }
 
   &::-webkit-scrollbar {
-    width: 7px;
+    width: 4px;
   }
 
   &::-webkit-scrollbar-thumb {

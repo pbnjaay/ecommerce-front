@@ -10,39 +10,39 @@
       >
         S'inscrire
       </div>
-      <form class="flex flex-col justify-center w-full">
+      <form class="flex flex-col space-y-4">
         <v-input
           type="text"
           required
-          placeholder="Nom"
           name="nom"
           label="nom"
           id="nom"
+          v-model="nom"
         />
         <v-input
           type="text"
           required
-          placeholder="Prenom"
           name="prenom"
           label="prenom"
           id="prenom"
+          v-model="prenom"
         />
         <v-input
           type="email"
           required
           autocomplete="off"
-          placeholder="E-mail"
           name="email"
           label="Email"
           id="email"
+          v-model="email"
         />
         <v-input
           type="password"
           required
-          placeholder="Mot de passe"
           name="pwd"
           label="Mot de passe"
           id="pwd"
+          v-model="pwd"
         />
         <v-button>Inscription</v-button>
       </form>
@@ -73,6 +73,14 @@
 import VInput from "@/components/VInput.vue";
 import VButton from "@/components/VButton.vue";
 export default {
+  data() {
+    return {
+      nom: "",
+      prenom: "",
+      email: "",
+      pwd: ""
+    };
+  },
   components: {
     VInput,
     VButton

@@ -1,8 +1,8 @@
 module.exports = {
-  purge: {
-    enabled: true,
-    content: ["./src/**/*.vue"]
-  },
+  // purge: {
+  //   enabled: true,
+  //   content: ["./src/**/*.vue"]
+  // },
   theme: {
     extend: {
       colors: {

@@ -3,19 +3,18 @@
     <div class="relative">
       <label
         :for="id"
-        class="font-normal absolute top-0 text-gray-500 opacity-0 bg-white"
+        class="font-normal absolute top-0 text-gray-500"
         :class="{ label: isShown }"
         >{{ label }}
       </label>
-      <input
+      <textarea
         :id="id"
-        class="focus:outline-none border-b py-2 bg-transparent border-gray-500 rounded text-sm font-sans inline-block w-full cursor-text focus:border-primary"
+        class="focus:outline-none border-b py-2 bg-transparent border-gray-500 rounded text-sm font-sans inline-block w-full cursor-text focus:border-primary h-10"
         v-bind="$attrs"
         v-on="inputListner"
         :name="name"
         :value="value"
-        :placeholder="label"
-      />
+      ></textarea>
     </div>
   </div>
 </template>
@@ -53,9 +52,8 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .label {
-  opacity: 1;
   transition: all 250ms ease;
   transform: translateY(-100%);
   @apply text-xs;

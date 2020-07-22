@@ -41,7 +41,7 @@
 }
 
 .min-w-drop {
-  min-width: 250px;
+  min-width: 240px;
 }
 
 .m-0-auto {
@@ -65,4 +65,10 @@
 .drop-leave-to {
   transform: translateY(-10px);
   opacity: 0;
+}
+.w-10p {
+  width: 14%;
+}
+.w-20p {
+  width: 18%;
 }

@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <router-view />
+    <router-view :key="$route.path" />
   </Layout>
 </template>
 

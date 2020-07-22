@@ -10,23 +10,23 @@
       >
         Se connecter
       </div>
-      <form class="flex flex-col justify-center w-full">
+      <form class="flex flex-col space-y-4">
         <v-input
           type="email"
           required
           autocomplete="email"
-          placeholder="E-mail"
           name="email"
           label="Email"
           id="email"
+          v-model="email"
         />
         <v-input
           type="password"
           required
-          placeholder="Mot de passe"
           name="pwd"
           label="Mot de passe"
           id="pwd"
+          v-model="pwd"
         />
         <v-button>Connexion</v-button>
       </form>
@@ -62,6 +62,12 @@
 import VInput from "@/components/VInput.vue";
 import VButton from "@/components/VButton.vue";
 export default {
+  data() {
+    return {
+      email: "",
+      pwd: ""
+    };
+  },
   components: {
     VInput,
     VButton
